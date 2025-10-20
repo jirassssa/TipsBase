@@ -11,5 +11,9 @@ typechain-types
 cache
 artifacts
 
+# Next.js
+.next
+out
+
 # Mac
 .DS_Store
