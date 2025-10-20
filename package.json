@@ -1,0 +1,23 @@
+{
+  "name": "base-tip-bot",
+  "version": "1.0.0",
+  "description": "Telegram/Discord tip bot on Base",
+  "main": "index.js",
+  "scripts": {
+    "compile": "hardhat compile",
+    "deploy": "hardhat run scripts/deploy.js --network base",
+    "bot": "node bot/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "hardhat": "^2.19.4"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "ethers": "^6.9.2",
+    "telegraf": "^4.16.3"
+  }
+}
