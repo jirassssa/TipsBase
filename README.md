@@ -100,10 +100,19 @@ Submission by Kokaew Thaweechotwatcharakul
 - Telegraf (Telegram Bot Framework)
 - Base Mainnet
 
+## Web Dashboard
+
+Access the web dashboard at: http://localhost:3001 (when running locally)
+
+Features:
+- 💵 **Deposit ETH** - Add funds to your tip wallet
+- 💸 **Withdraw ETH** - Transfer to any address
+- 📊 **View Statistics** - Balance, tips sent/received
+- 🔗 **Wallet Connect** - Connect with MetaMask, WalletConnect
+
 ## Future Improvements
 
 - [ ] Discord bot integration
-- [ ] Web dashboard for deposits/withdrawals
 - [ ] Username -> User ID mapping database
 - [ ] Multi-signature security
 - [ ] Gas-less transactions (meta-transactions)
