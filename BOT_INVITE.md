@@ -104,7 +104,7 @@ https://discord.com/api/oauth2/authorize?client_id=1429824670823092377&permissio
 - Contract: 0x6B21dDC3B71a892196B8d70e69e60866d71DeF7a
 
 **Telegram Bot:**
-- Token: 8246987588:AAHTDYa3zt5FCRhsMlPj5JNOax9IBpSJbLI
+- Token: (See .env file)
 - Status: ⚠️ Running (need to test)
 
 ---
