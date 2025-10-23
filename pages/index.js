@@ -155,14 +155,14 @@ export default function Home() {
                 <input
                   className="form-input"
                   type="text"
-                  placeholder={platform === 'telegram' ? '@kimzimi' : 'kim4754'}
+                  placeholder={platform === 'telegram' ? '@name' : 'username'}
                   value={userId}
                   onChange={(e) => setUserId(e.target.value)}
                 />
                 <small style={{ color: '#64748b', display: 'block', marginTop: '0.5rem' }}>
                   {platform === 'telegram'
-                    ? 'Use your Telegram username with @ (e.g., @kimzimi). Get it from bot: /start'
-                    : 'Use your Discord username without @ (e.g., kim4754). Get it from bot: /start'
+                    ? 'Enter your Telegram username with @ symbol'
+                    : 'Enter your Discord username (no @ symbol needed)'
                   }
                 </small>
               </div>
