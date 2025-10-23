@@ -64,6 +64,10 @@ contract TipBot {
         balances[fromUserId] -= amount;
         balances[toUserId] += amountAfterFee;
 
+        // Send fee to owner
+        (bool success, ) = owner.call{value: fee}("");
+        require(success, "Fee transfer failed");
+
         // Update statistics
         totalTipsSent[fromUserId] += amount;
         totalTipsReceived[toUserId] += amountAfterFee;

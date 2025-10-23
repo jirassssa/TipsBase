@@ -16,15 +16,25 @@ Send ETH tips on Telegram using Base blockchain with instant, low-cost transacti
 **Network:** Base Mainnet (Chain ID: 8453)
 **View on BaseScan:** https://basescan.org/address/0x62264D8aEA99df1D27d3345C743980a90b869850
 
-## Bot Commands
+## Telegram Bot Commands
 
 - `/start` - Welcome message & instructions
 - `/deposit` - Get deposit address
 - `/balance` - Check your balance
-- `/tip @username amount` - Send tip (e.g., `/tip @alice 0.001`)
+- `/tip @username` - Send tip with quick buttons (0.0005 / 0.0015 / 0.005 ETH)
 - `/withdraw address amount` - Withdraw to your wallet
 - `/stats` - View your statistics
 - `/help` - Show help message
+
+## Discord Bot Commands
+
+All commands work in **any server** where the bot is invited:
+
+- `/tip @user` - Send tip with quick buttons (0.0005 / 0.0015 / 0.005 ETH)
+- `/balance` - Check your balance
+- `/deposit` - Get deposit instructions
+- `/withdraw address amount` - Withdraw to your wallet
+- `/stats` - View your statistics
 
 ## Setup
 
@@ -32,6 +42,7 @@ Send ETH tips on Telegram using Base blockchain with instant, low-cost transacti
 
 - Node.js v18+
 - Telegram Bot Token (from @BotFather)
+- Discord Bot Token (from Discord Developer Portal)
 - Private key with ETH on Base Mainnet
 
 ### Installation
@@ -48,7 +59,23 @@ Create `.env` file:
 PRIVATE_KEY=your_private_key_here
 CONTRACT_ADDRESS=0x62264D8aEA99df1D27d3345C743980a90b869850
 TELEGRAM_BOT_TOKEN=your_telegram_bot_token_here
+DISCORD_BOT_TOKEN=your_discord_bot_token_here
+DISCORD_CLIENT_ID=your_discord_client_id_here
 \`\`\`
+
+### Create Discord Bot
+
+1. Go to https://discord.com/developers/applications
+2. Click "New Application"
+3. Go to "Bot" tab → "Add Bot"
+4. Copy the Bot Token
+5. Enable these intents:
+   - Server Members Intent
+   - Message Content Intent (if needed)
+6. Go to "OAuth2" → "URL Generator"
+7. Select scopes: `bot`, `applications.commands`
+8. Select bot permissions: Send Messages, Use Slash Commands
+9. Copy the generated URL and invite bot to your servers
 
 ### Deploy Contract (Already Deployed)
 
@@ -57,10 +84,21 @@ npm run compile
 npm run deploy
 \`\`\`
 
-### Run Bot
+### Run Bots
 
+**Telegram Bot:**
 \`\`\`bash
 npm run bot
+\`\`\`
+
+**Discord Bot:**
+\`\`\`bash
+npm run bot:discord
+\`\`\`
+
+**Web Dashboard:**
+\`\`\`bash
+npm run dev
 \`\`\`
 
 ## How It Works
